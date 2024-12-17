@@ -2,23 +2,20 @@
     "pipeline_params":
     {
         "env_name":"user",
-        "pipeline_name":"pipeline",
-        "zone_name":"zone",
-        "X": "something"
+        "pipeline_name":"face_detect_rest",
+        "zone_name":"test"
     },
-    "step_params":
-    {
-        "Y": "something_else"
-    },
+    "step_params": {},
     "substeps_params":
     [
         {
-            "substep_name":"do_step.ipynb",
+            "substep_name":"data_load.ipynb",
             "substep_params":
             {
-                "param1":"None1",
-                "param2":"None2"
+                    "wider_dataset_url": "/raw/face_datasets/wider_face/wider-face.tar",
+                    "yolox_pth_pretrain_weights": "https://download.openmmlab.com/mmdetection/v2.0/yolox/yolox_s_8x8_300e_coco/yolox_s_8x8_300e_coco_20211121_095711-4592a793.pth"
             }
         }
     ]
 }
+
